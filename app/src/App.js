@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './Pages/Home'
+import Intro from './Pages/Intro'
+
+export default class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      isLoggedIn: false
+    }
+  }
+
+  componentDidMount() {
+    this.checkLoggedIn()
+  }
+
+  checkLoggedIn = () => {
+    const user = localStorage.getItem('user') // Get user name from local storage
+    if (user) {
+      // If user name exists, set user to logged in
+
+      return this.setState({ isLoggedIn: true })
+    }
+  }
+
+  isLoggedInHandler = (name, avatarUrl) => {
+    this.setState({ isLoggedIn: true }) // Setting user to logged in
+    let user = { name, avatarUrl }
+
+    // TODO: Change to chrome storage API
+    localStorage.setItem('user', JSON.stringify(user)) // Saving user info to local storage
+  }
+
+  render() {
+    const { isLoggedIn } = this.state
+    const CurrentView = isLoggedIn ? Home : Intro // Conditional rendering checking if user
+    return (
+      <div className="vh-100 w-100 body-wrapper">
+        <CurrentView isLoggedInHandler={this.isLoggedInHandler} />
+      </div>
+    )
+  }
 }
-
-export default App;

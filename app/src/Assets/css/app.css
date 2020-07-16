@@ -1,0 +1,376 @@
+.home {
+  transition: all 0.4s ease-in-out;
+}
+
+.home-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.menu-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.side-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  transform: translateX(-100%);
+  /* box-shadow: 5px 0 5px -5px #333; */
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.side-drawer.show {
+  transform: translateX(0);
+}
+
+.back-drop {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.avatar-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: white;
+}
+
+.avatar-home img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 8rem;
+  /* font-weight: bold; */
+  letter-spacing: 1.2px;
+}
+
+.greeting {
+  margin: 0;
+  font-size: 2.1rem;
+  /* letter-spacing: 1.2px; */
+  font-weight: 500;
+}
+
+.tray {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 100%;
+  z-index: 5;
+  background: rgba(255, 255, 255, 1);
+  transition: all 0.1s ease-in-out;
+}
+
+.tray.hide {
+  opacity: 0;
+}
+
+.tray.show {
+  opacity: 1;
+}
+
+.photo-card-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 120px;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  cursor: pointer;
+}
+
+.photo-card img {
+  width: 65%;
+  height: 65%;
+}
+
+.photo-card span {
+  font-size: 14px;
+}
+
+.card-row {
+  position: absolute;
+  height: 85%;
+  overflow-y: scroll;
+}
+
+.photo-tray-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.check {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* .bottom-widget {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  right: 0;
+  background: red;
+  width: 100%;
+  height: 45px;
+} */
+
+.todos-tray {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 280px;
+  /* height: 300px; */
+  margin-right: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  user-select: none;
+  transform: translateY(calc(100% - 45px));
+  transition: all 0.3s ease-in-out;
+}
+
+.todos-tray.show {
+  transform: translateY(0);
+}
+
+.todos-tray-header {
+  width: 100%;
+  height: 45px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.todos-badge {
+  position: absolute;
+  left: 0;
+  margin-left: 20px;
+  background: red;
+  height: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 4px;
+  color: white;
+}
+
+.chevron-ctn {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.todo-input {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 45px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-in-out;
+}
+
+.todo-input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.no-todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+.no-todos span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.todo-list {
+  list-style: none;
+  width: 100%;
+  margin-top: 35px;
+  margin-bottom: 60px;
+  /* background: red; */
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* background: black; */
+}
+
+.delete-icon {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-icon:hover {
+  opacity: 0.7;
+}
+
+.clear-todos {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.15s ease-in-out;
+}
+
+.clear-todos:hover {
+  opacity: 0.6;
+}
+
+.add-new-todo {
+  background: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+  opacity: 0.9;
+}
+
+.add-new-todo:hover {
+  opacity: 0.85;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 40px;
+  height: 40px;
+  border-radius: 50%; */
+  /* background: rgba(0, 0, 0, 0.5); */
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.icon:hover {
+  opacity: 0.9;
+}
+
+.icon-side-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.add-note-ctn {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.5s ease-in-out;
+}
+
+.add-note-ctn.show {
+  display: flex;
+  opacity: 1;
+}
+
+.add-note-ctn.hide {
+  display: none;
+  opacity: 0;
+}
+
+.add-note-modal {
+  width: 50%;
+  height: 85%;
+  z-index: 1000;
+  background: white;
+}
+
+.note {
+  position: fixed;
+  width: 75%;
+  height: 100%;
+  background: white;
+  top: 0;
+  right: 0;
+}
+
+.note-btns {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.note-btns span {
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.note-btns span:hover {
+  opacity: 0.8;
+}
+.selected {
+  background: rgba(0, 0, 0, 0.1) !important;
+}

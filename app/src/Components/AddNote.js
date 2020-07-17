@@ -33,7 +33,7 @@ const AddNote = ({ modalHandler, addNoteHandler }) => {
   useOutsideAlerter(wrapperRef)
 
   return (
-    <div className="add-note-ctn text-left show">
+    <div className="add-modal-ctn text-left show">
       <div ref={wrapperRef} className="add-note-modal shadow-lg p-4 rounded-sm ml-5">
         <h4 className="text-center">{title ? title : 'New note'}</h4>
         <div className="d-flex flex-column align-items-center justify-content-center" style={{ height: '90%' }}>

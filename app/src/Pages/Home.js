@@ -101,7 +101,7 @@ export default class Home extends Component {
       <div className="vh-100 w-100 home animate__animated animate__fadeIn animate__faster" style={homeStyle}>
         <div className="h-100 w-100 home-overlay d-flex align-items-center justify-content-center">
           <span className="menu-btn mt-3 ml-3" onClick={this.sidedrawerHandler}>
-            <Menu size={'30'} color={'#fff'} />
+            <Menu size={'35'} color={'#fff'} />
           </span>
           <Sidedrawer
             showSidedrawer={showSidedrawer}

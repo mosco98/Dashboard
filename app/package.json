@@ -9,6 +9,7 @@
     "fs-extra": "^9.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-dropdown": "^1.7.0",
     "react-feather": "^2.0.8",
     "react-live-clock": "^4.0.5",
     "react-scripts": "3.4.1",

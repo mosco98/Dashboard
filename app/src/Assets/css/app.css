@@ -315,7 +315,7 @@
   background: rgba(0, 0, 0, 0.03);
 }
 
-.add-note-ctn {
+.add-modal-ctn {
   position: fixed;
   align-items: center;
   justify-content: center;
@@ -330,12 +330,12 @@
   transition: all 0.5s ease-in-out;
 }
 
-.add-note-ctn.show {
+.add-modal-ctn.show {
   display: flex;
   opacity: 1;
 }
 
-.add-note-ctn.hide {
+.add-modal-ctn.hide {
   display: none;
   opacity: 0;
 }
@@ -373,4 +373,21 @@
 }
 .selected {
   background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.add-reminder-modal {
+  width: 450px;
+  height: 450px;
+  background: white;
+}
+
+.select-day {
+  width: 70%;
+}
+.period {
+  width: 80px;
+}
+
+.time-input {
+  font-size: 3rem;
 }
